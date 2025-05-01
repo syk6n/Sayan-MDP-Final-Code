@@ -1,4 +1,4 @@
-import { Search, Palette, Tag, Calendar, Filter, Info, X, Upload } from 'lucide-react';
+import { Search, Palette, Tag, Filter, Info, X, Upload } from 'lucide-react';
 import { useState } from 'react';
 import { useStore } from '../store';
 
@@ -136,27 +136,6 @@ export function UI({ onOpenUploader }: UIProps) {
             )}
           </div>
 
-          {/* Year Parameter */}
-          <div className="relative">
-            <button 
-              className={`w-16 h-16 rounded-full bg-white/10 flex items-center justify-center shadow-lg hover:scale-105 transition-transform ${activeMenu === 'year' ? 'ring-2 ring-white' : ''}`}
-              onClick={() => handleMenuClick('year')}
-            >
-              <Calendar className="text-white" size={28} />
-            </button>
-            {activeMenu === 'year' && (
-              <div className="absolute left-20 top-1/2 -translate-y-1/2 bg-black/90 border border-white/10 rounded-lg p-4 w-48">
-                <h3 className="text-lg font-semibold mb-3">Year</h3>
-                <div className="space-y-2">
-                  <button className="w-full py-2 px-3 rounded bg-white/10 hover:bg-white/20">Pre-1950</button>
-                  <button className="w-full py-2 px-3 rounded bg-white/10 hover:bg-white/20">1950-1980</button>
-                  <button className="w-full py-2 px-3 rounded bg-white/10 hover:bg-white/20">1980-2000</button>
-                  <button className="w-full py-2 px-3 rounded bg-white/10 hover:bg-white/20">2000-Present</button>
-                </div>
-              </div>
-            )}
-          </div>
-
           {/* Upload */}
           <div className="relative">
             <button 
@@ -238,16 +217,6 @@ export function UI({ onOpenUploader }: UIProps) {
                   </button>
                 ))}
               </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-white/70 mb-2">Creation Period</label>
-              <select className="w-full bg-white/10 rounded px-3 py-2 text-sm">
-                <option value="">All Periods</option>
-                <option value="pre-independence">Pre-Independence</option>
-                <option value="post-independence">Post-Independence</option>
-                <option value="modern">Modern Era (2000+)</option>
-              </select>
             </div>
           </div>
         </div>
