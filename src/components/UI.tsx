@@ -63,7 +63,7 @@ export function UI({ onOpenUploader }: UIProps) {
         <img 
           src="/logo.svg"
           alt="Logo" 
-          className="w-24 h-auto opacity-80 hover:opacity-100 transition-opacity"
+          className="w-32 h-auto opacity-80 hover:opacity-100 transition-opacity"
         />
       </div>
 
